@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { TestingQueryRepository } from './api/queryRepository/testing.query.repository';
 import { TestingController } from './api/testing.controller';
+import { TestingRepository } from './infrastructure/testing.query.repository';
 
-const adapters = [TestingQueryRepository];
+const adapters = [TestingRepository];
 
 @Module({
   controllers: [TestingController],
